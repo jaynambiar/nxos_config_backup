@@ -1,0 +1,12 @@
+---
+- name: Take Config Backup
+  hosts:
+    - all
+  gather_facts: no
+  tasks:
+    - name: Backup Configuration
+      nxos_config:
+        backup: yes
+        backup_options:
+          dir_path: backups
+      
