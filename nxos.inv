@@ -1,0 +1,13 @@
+[nexus]
+dc1cs01 ansible_host=192.168.0.231
+dc1cs02 ansible_host=192.168.0.232
+dc2cs01 ansible_host=192.168.0.233
+dc2cs02 ansible_host=192.168.0.234
+
+[nexus:vars]
+ansible_connection=network_cli
+ansible_network_os=nxos
+ansible_ssh_user=admin
+ansible_ssh_pass=admin
+ssh_type=auto
+ansible_ssh_common_args='-o StrictHostKeyChecking=no -o HostKeyAlgorithms=ssh-rsa -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ciphers=aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc'
